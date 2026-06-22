@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: arbiscan-backend
+    env: docker
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      - key: DB_TYPE
+        value: sqlite
+      - key: DB_DATABASE
+        value: db.sqlite
